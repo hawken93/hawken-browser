@@ -1,2 +1,12 @@
 ---
-# tasks file for hawken-browser
+- name: Install & setup firefox
+  include: firefox.yml
+  when: hawken_browser_firefox.enabled
+  tags:
+  - firefox
+
+- name: Install & setup chromium
+  include: chromium.yml
+  when: hawken_browser_chromium.enabled
+  tags:
+  - chromium

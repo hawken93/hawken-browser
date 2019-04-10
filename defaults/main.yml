@@ -1,2 +1,5 @@
 ---
-# defaults file for hawken-browser
+hawken_browser_firefox:
+  enabled: yes
+hawken_browser_chromium:
+  enabled: yes

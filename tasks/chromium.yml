@@ -1,0 +1,4 @@
+---
+- name: chromium | install
+  apt:
+    name: chromium
