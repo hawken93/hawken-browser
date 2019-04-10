@@ -2,3 +2,18 @@
 - name: firefox | install
   apt:
     name: firefox-esr
+
+- name: firefox | policies.json
+  template:
+    src: files/usr/lib/firefox/distribution/policies.json
+    dest: /usr/lib/firefox-esr/distribution/policies.json
+
+- name: firefox | general.config loader
+  template:
+    src: files/etc/firefox/hawken-browser.js
+    dest: /etc/firefox-esr/hawken-browser.js
+
+- name: firefox | config file
+  template:
+    src: files/usr/lib/firefox/hawken-browser.cfg
+    dest: /usr/lib/firefox-esr/hawken-browser.cfg
