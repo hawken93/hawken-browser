@@ -4,8 +4,11 @@ Deployment of sane system wide defaults for firefox (and chromium later)
 
 ## Requirements
 
-Only tested on debian buster (10). Do other debian-based at your own risk.
-But tell me if it worked or what you need for it to work.
+Tested on debian 10/buster and ubuntu 18.04
+
+## TODO
+
+* chromium hardening
 
 ## Role Variables
 

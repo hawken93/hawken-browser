@@ -11,6 +11,9 @@ galaxy_info:
   - name: Debian
     versions:
     - 10
+  - name: Ubuntu
+    versions:
+    - 18.04
 
   galaxy_tags: []
 

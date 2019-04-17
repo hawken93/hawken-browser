@@ -1,4 +1,14 @@
 ---
+- name: chromium | ubuntu facts
+  set_fact:
+    chromium_name: chromium-browser
+  when: ansible_distribution == 'Ubuntu'
+
+- name: chromium | debian facts
+  set_fact:
+    chromium_name: chromium
+  when: ansible_distribution == 'Debian'
+
 - name: chromium | install
   apt:
-    name: chromium
+    name: "{{ chromium_name }}"
