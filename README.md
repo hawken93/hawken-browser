@@ -28,11 +28,22 @@ Avoiding this.
 
 ## Example Playbook
 
-Will copy in once I get it working
+```
+- hosts: desktops
+  roles:
+    - hawken-browser
+```
 
 ## License
 
 GPLv2
+
+## Extras
+
+Some extensions everybody should have (firefox):
+
+* https://addons.mozilla.org/en-US/firefox/addon/buster-captcha-solver/
+* https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
 
 ## Author Information
 
