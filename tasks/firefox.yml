@@ -41,5 +41,4 @@
     dest: "/usr/lib/{{ firefox_name }}/libnssckbi.so"
     state: link
     force: yes
-    name: p11-kit-modules
   when: hawken_browser_firefox.systemcerts
