@@ -1,0 +1,13 @@
+{{ ansible_managed | comment }}
+
+# Show all extensions in about:extensions
+export CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --show-component-extension-options"
+
+# Enable GPU raster
+export CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --enable-gpu-rasterization"
+
+# Stop the spam
+export CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --no-default-browser-check"
+
+# no pinging
+export CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --disable-pings"

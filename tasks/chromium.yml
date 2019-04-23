@@ -2,13 +2,20 @@
 - name: chromium | ubuntu facts
   set_fact:
     chromium_name: chromium-browser
+    chromium_default: /etc/chromium-browser/customizations/01-hawken-browser
   when: ansible_distribution == 'Ubuntu'
 
 - name: chromium | debian facts
   set_fact:
     chromium_name: chromium
+    chromium_default: /etc/chromium.d/01-hawken-browser
   when: ansible_distribution == 'Debian'
 
 - name: chromium | install
   apt:
     name: "{{ chromium_name }}"
+
+- name: chromium | set flags
+  template:
+    src: files/etc/chromium/hawken-browser
+    dest: "{{ chromium_default }}"
