@@ -23,7 +23,7 @@
 - name: firefox | general.config loader
   template:
     src: files/etc/firefox/hawken-browser.js
-    dest: "/etc/{{ firefox_name }}/hawken-browser.js"
+    dest: "/etc/{{ firefox_name }}/{{ config_loader }}"
 
 - name: firefox | config file
   template:
