@@ -1,20 +1,22 @@
 {
 	"_comment": "{{ ansible_managed }}",
-	"Cookies": {
-		"AcceptThirdParty": "never",
-		"RejectTracker": true
-	},
-	"DNSOverHTTPS": {
-		"Enabled": false
-	},
-	"DisableFeedbackCommands": true,
-	"DisableFirefoxScreenshots": true,
-	"DisableFirefoxAccounts": true,
-	"DisableFirefoxStudies": true,
-	"DisablePocket": true,
-	"DisableTelemetry": true,
-	"DontCheckDefaultBrowser": true,
-	"EnableTrackingProtection": {
-		"Value": true
+	"policies": {
+		"Cookies": {
+			"AcceptThirdParty": "never",
+			"RejectTracker": true
+		},
+		"DNSOverHTTPS": {
+			"Enabled": false
+		},
+		"DisableFeedbackCommands": true,
+		"DisableFirefoxScreenshots": true,
+		"DisableFirefoxAccounts": true,
+		"DisableFirefoxStudies": true,
+		"DisablePocket": true,
+		"DisableTelemetry": true,
+		"DontCheckDefaultBrowser": true,
+		"EnableTrackingProtection": {
+			"Value": true
+		}
 	}
 }
