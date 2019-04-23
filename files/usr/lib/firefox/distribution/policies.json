@@ -1,11 +1,7 @@
 {
 	"_comment": "{{ ansible_managed }}",
 	"policies": {
-		{% if hawken_browser_firefox.certificates.enabled %}"Certificates": {
-			"ImportEnterpriseRoots": true,
-			"Install": ["{{ hawken_browser_firefox.certificates.names|join('\", \"') }}"]
-		},
-		{% endif %}"Cookies": {
+		"Cookies": {
 			"AcceptThirdParty": "never",
 			"RejectTracker": true
 		},

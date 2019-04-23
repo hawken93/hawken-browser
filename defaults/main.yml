@@ -1,9 +1,6 @@
 ---
-hawken_browser_certificates: []
 hawken_browser_firefox:
   enabled: yes
-  certificates:
-    enabled: no
-    names: []
+  systemcerts: no
 hawken_browser_chromium:
   enabled: yes

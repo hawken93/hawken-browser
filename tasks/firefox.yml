@@ -11,18 +11,6 @@
     config_loader: hawken-browser.js
   when: ansible_distribution == 'Debian'
 
-- name: firefox | certificate folder
-  file:
-    path: /usr/lib/mozilla/certificates
-    state: directory
-
-- name: firefox | copy certificates
-  copy:
-    src: "{{ item }}"
-    dest: "/usr/lib/mozilla/certificates/{{ item | basename }}"
-    remote_src: yes
-  with_items: "{{ hawken_browser_certificates }}"
-
 - name: firefox | install
   apt:
     name: "{{ firefox_name }}"
@@ -41,3 +29,17 @@
   template:
     src: files/usr/lib/firefox/hawken-browser.cfg
     dest: "/usr/lib/{{ firefox_name }}/hawken-browser.cfg"
+
+- name: firefox | p11-kit-modules
+  apt:
+    name: p11-kit-modules
+  when: hawken_browser_firefox.systemcerts
+
+- name: firefox | p11-kit-proxy link
+  file:
+    src: /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so
+    dest: "/usr/lib/{{ firefox_name }}/libnssckbi.so"
+    state: link
+    force: yes
+    name: p11-kit-modules
+  when: hawken_browser_firefox.systemcerts
