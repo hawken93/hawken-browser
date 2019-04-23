@@ -13,11 +13,21 @@ Tested on debian 10/buster and ubuntu 18.04
 ## Role Variables
 
 ```
+hawken_browser_certificates: []
 hawken_browser_firefox:
   enabled: yes
+  certificates:
+    enabled: no
+    names: []
 hawken_browser_chromium:
   enabled: yes
 ```
+
+hawken\_browser\_certificates are certificates on the destination that will be
+copied into the browsers.
+
+hawken\_browser\_\*.certificates.names are a list of certificates to import,
+set this to the basenames of the hawken\_browser\_certificates
 
 enabled means this browser will be installed and configured.
 

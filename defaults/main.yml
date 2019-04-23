@@ -1,4 +1,5 @@
 ---
+hawken_browser_certificates: []
 hawken_browser_firefox:
   enabled: yes
   certificates:

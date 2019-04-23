@@ -11,6 +11,18 @@
     config_loader: hawken-browser.js
   when: ansible_distribution == 'Debian'
 
+- name: firefox | certificate folder
+  file:
+    path: /usr/lib/mozilla/certificates
+    state: directory
+
+- name: firefox | copy certificates
+  copy:
+    src: "{{ item }}"
+    dest: "/usr/lib/mozilla/certificates/{{ item | basename }}"
+    remote_src: yes
+  with_items: "{{ hawken_browser_certificates }}"
+
 - name: firefox | install
   apt:
     name: "{{ firefox_name }}"
