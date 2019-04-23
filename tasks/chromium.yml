@@ -3,12 +3,14 @@
   set_fact:
     chromium_name: chromium-browser
     chromium_default: /etc/chromium-browser/customizations/01-hawken-browser
+    chromium_policies: /etc/chromium-browser/policies
   when: ansible_distribution == 'Ubuntu'
 
 - name: chromium | debian facts
   set_fact:
     chromium_name: chromium
     chromium_default: /etc/chromium.d/01-hawken-browser
+    chromium_policies: /etc/chromium/policies
   when: ansible_distribution == 'Debian'
 
 - name: chromium | install
@@ -19,3 +21,13 @@
   template:
     src: files/etc/chromium/hawken-browser
     dest: "{{ chromium_default }}"
+
+- name: chromium | ensure policies dir
+  file:
+    path: "{{ chromium_policies }}/managed"
+    state: directory
+
+- name: chromium | set managed policies
+  template:
+    src: files/etc/chromium/policies/managed/hawken-browser.json
+    dest: "{{ chromium_policies }}/managed/hawken-browser.json"

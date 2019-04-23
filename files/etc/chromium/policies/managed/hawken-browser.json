@@ -1,0 +1,21 @@
+{
+	"_comment": "{{ ansible_managed }}",
+	"DefaultGeolocationSetting": 3,
+	"CloudPrintProxyEnabled": false,
+	"SafeBrowsingExtendedReportingEnabled": false,
+	"RestoreOnStartup": 1,
+	"AdsSettingForIntrusiveAdsSites": 2,
+	"AutoplayAllowed": false,
+	"BackgroundModeEnabled": false,
+	"BlockThirdPartyCookies": true,
+	"BrowserSignin": 0,
+	"BuiltInDnsClientEnabled": false,
+	"DefaultBrowserSettingEnabled": false,
+	"MetricsReportingEnabled": false,
+	"NetworkPredictionOptions": 2,
+	"PromotionalTabsEnabled": false,
+	"SearchSuggestEnabled": false,
+	"SpellCheckServiceEnabled": false,
+	"SyncDisabled": true,
+	"UrlKeyedAnonymizedDataCollectionEnabled": false
+}
