@@ -51,10 +51,3 @@ Some extensions everybody should have (firefox):
 ## Author Information
 
 Håkon Struijk Holmen
-
-## Extras
-
-Some nice extensions:
-
-* https://addons.mozilla.org/en-US/firefox/addon/buster-captcha-solver/
-* https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
