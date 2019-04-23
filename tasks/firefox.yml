@@ -15,6 +15,10 @@
   apt:
     name: "{{ firefox_name }}"
 
+- name: firefox | ublock origin
+  apt:
+    name: xul-ext-ublock-origin
+
 - name: firefox | policies.json
   template:
     src: files/usr/lib/firefox/distribution/policies.json

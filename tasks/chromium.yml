@@ -17,6 +17,10 @@
   apt:
     name: "{{ chromium_name }}"
 
+- name: chromium | ublock origin
+  apt:
+    name: chromium-ublock-origin
+
 - name: chromium | set flags
   template:
     src: files/etc/chromium/hawken-browser
