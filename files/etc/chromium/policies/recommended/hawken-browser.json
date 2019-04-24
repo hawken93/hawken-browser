@@ -1,7 +1,6 @@
 {
 	"_comment": "{{ ansible_managed }}. Voluntary settings",
 	"AudioCaptureAllowed": false,
-	"DefaultNotificationsSetting": 2,
 	"DefaultPluginsSetting": 3,
 	"EnableMediaRouter": false,
 	"RestoreOnStartup": 1,
