@@ -37,7 +37,7 @@
 - name: firefox | p11-kit-modules
   apt:
     name: p11-kit-modules
-  when: hawken_browser_firefox.systemcerts
+  when: hawken_browser_firefox_systemcerts
 
 - name: firefox | p11-kit-proxy link
   file:
@@ -45,4 +45,4 @@
     dest: "/usr/lib/{{ firefox_name }}/libnssckbi.so"
     state: link
     force: yes
-  when: hawken_browser_firefox.systemcerts
+  when: hawken_browser_firefox_systemcerts

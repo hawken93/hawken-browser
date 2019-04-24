@@ -13,16 +13,14 @@ Tested on debian 10/buster and ubuntu 18.04
 ## Role Variables
 
 ```
-hawken_browser_firefox:
-  enabled: yes
-  systemcerts: no
-hawken_browser_chromium:
-  enabled: yes
+hawken_browser_firefox_enabled: yes
+hawken_browser_firefox_systemcerts: yes
+hawken_browser_chromium_enabled: yes
 ```
 
-enabled means this browser will be installed and configured.
+\*\_enabled means this browser will be installed and configured.
 
-systemcerts: use system certificates
+\*\_systemcerts: use system certificates
 
 Each of the browsers will have more options coming as the role advances, but
 they will probably differ. A goal is to try to make them as uniform as possible
