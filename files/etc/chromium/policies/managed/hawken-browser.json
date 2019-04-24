@@ -5,7 +5,6 @@
 	"AutoplayAllowed": false,
 	"BackgroundModeEnabled": false,
 	"BlockThirdPartyCookies": true,
-	"BrowserAddPersonEnabled": false,
 	"BrowserGuestModeEnabled": false,
 	"BrowserNetworkTimeQueriesEnabled": false,
 	"BrowserSignin": 0,
