@@ -26,12 +26,22 @@
     src: files/etc/chromium/hawken-browser
     dest: "{{ chromium_default }}"
 
-- name: chromium | ensure policies dir
+- name: chromium | ensure policies/managed directory
   file:
     path: "{{ chromium_policies }}/managed"
+    state: directory
+
+- name: chromium | ensure policies/recommended directory
+  file:
+    path: "{{ chromium_policies }}/recommended"
     state: directory
 
 - name: chromium | set managed policies
   template:
     src: files/etc/chromium/policies/managed/hawken-browser.json
     dest: "{{ chromium_policies }}/managed/hawken-browser.json"
+
+- name: chromium | set recommended policies
+  template:
+    src: files/etc/chromium/policies/recommended/hawken-browser.json
+    dest: "{{ chromium_policies }}/recommended/hawken-browser.json"
