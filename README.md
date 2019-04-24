@@ -6,10 +6,6 @@ Deployment of sane system wide defaults for firefox (and chromium later)
 
 Tested on debian 10/buster and ubuntu 18.04
 
-## TODO
-
-* chromium hardening
-
 ## Role Variables
 
 ```
@@ -28,7 +24,7 @@ but no guarantees can be made.
 
 ## Dependencies
 
-Avoiding this.
+None
 
 ## Example Playbook
 
