@@ -3,10 +3,6 @@
 	"AudioCaptureAllowed": false,
 	"DefaultNotificationsSetting": 2,
 	"DefaultPluginsSetting": 3,
-	"DefaultSearchProviderEnabled": true,
-	"DefaultSearchProviderIconURL": "https://duckduckgo.com/favicon.ico",
-	"DefaultSearchProviderName": "DuckDuckGo",
-	"DefaultSearchProviderSearchURL": "https://duckduckgo.com/?q=%s",
 	"EnableMediaRouter": false,
 	"RestoreOnStartup": 1,
 	"VideoCaptureAllowed": false
