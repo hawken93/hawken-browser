@@ -12,11 +12,14 @@ Tested on debian 10/buster and ubuntu 18.04
 hawken_browser_firefox_enabled: yes
 hawken_browser_firefox_systemcerts: yes
 hawken_browser_chromium_enabled: yes
+#hawken_browser_chromium_realm: example.com
 ```
 
 \*\_enabled means this browser will be installed and configured.
 
 \*\_systemcerts: use system certificates
+
+\*\_realm: if this is defined, where the browser will use kerberos auth
 
 Each of the browsers will have more options coming as the role advances, but
 they will probably differ. A goal is to try to make them as uniform as possible

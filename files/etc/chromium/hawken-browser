@@ -11,3 +11,8 @@ export CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --no-default-browser-check"
 
 # no pinging
 export CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --disable-pings"
+
+{% if hawken_browser_chromium_realm is defined %}
+# kerberos auth
+export CHROMIUM_FLAGS="${CHROMIUM_FLAGS} --auth-server-whitelist=*.{{ hawken_browser_chromium_realm }}"
+{% endif %}
