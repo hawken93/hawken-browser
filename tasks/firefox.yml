@@ -33,16 +33,3 @@
   template:
     src: files/usr/lib/firefox/hawken-browser.cfg
     dest: "/usr/lib/{{ firefox_name }}/hawken-browser.cfg"
-
-- name: firefox | p11-kit-modules
-  apt:
-    name: p11-kit-modules
-  when: hawken_browser_firefox_systemcerts
-
-- name: firefox | p11-kit-proxy link
-  file:
-    src: /usr/lib/x86_64-linux-gnu/p11-kit-proxy.so
-    dest: "/usr/lib/{{ firefox_name }}/libnssckbi.so"
-    state: link
-    force: yes
-  when: hawken_browser_firefox_systemcerts
