@@ -17,8 +17,7 @@
 		"DontCheckDefaultBrowser": true,
 		"EnableTrackingProtection": {
 			"Value": true
-		},
-		{% if hawken_browser_ca_certificate %}
+		}{% if hawken_browser_ca_certificate %},
 		"Certificates": {
 			"ImportEnterpriseRoots": true,
 			"Install": ["{{ hawken_browser_ca_certificate }}"]
