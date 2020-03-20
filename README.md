@@ -8,6 +8,7 @@ Tested on debian 10/buster and ubuntu 18.04
 
 ## Role Variables
 
+Examples:
 ```
 hawken_browser_firefox_enabled: yes
 hawken_browser_chromium_enabled: yes
@@ -15,15 +16,13 @@ hawken_browser_chromium_enabled: yes
 hawken_browser_ca_certificate: no
 ```
 
-\*\_enabled means this browser will be installed and configured.
 
-\*\_systemcerts: use system certificates
+* `hawken_browser_*_enabled` --- this browser will be installed and configured.
+* `hawken_browser_*_systemcerts` --- use system certificates for this browser
+* `hawken_browser_*_realm` --- if this is defined, where the browser will use kerberos auth
+* `hawken_browser_*_av` --- Enable browser use of webcam/audio, default no
 
-\*\_realm: if this is defined, where the browser will use kerberos auth
-
-Each of the browsers will have more options coming as the role advances, but
-they will probably differ. A goal is to try to make them as uniform as possible
-but no guarantees can be made.
+Replace '*' with firefox or chromium.
 
 ## Dependencies
 

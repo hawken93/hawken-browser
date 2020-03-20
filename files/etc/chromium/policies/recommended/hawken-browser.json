@@ -1,8 +1,8 @@
 {
 	"_comment": "{{ ansible_managed }}. Voluntary settings",
-	"AudioCaptureAllowed": false,
+	"AudioCaptureAllowed": {{ 'true' if hawken_browser_chromium_av else 'false' }},
 	"DefaultPluginsSetting": 3,
-	"EnableMediaRouter": false,
+	"EnableMediaRouter": {{ 'true' if hawken_browser_chromium_av else 'false' }},
 	"RestoreOnStartup": 1,
-	"VideoCaptureAllowed": false
+	"VideoCaptureAllowed": {{ 'true' if hawken_browser_chromium_av else 'false' }}
 }

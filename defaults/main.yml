@@ -3,3 +3,7 @@ hawken_browser_firefox_enabled: yes
 hawken_browser_chromium_enabled: yes
 #hawken_browser_chromium_realm: example.com
 hawken_browser_ca_certificate: no
+
+# webcam / audio support
+hawken_browser_firefox_av: no
+hawken_browser_chromium_av: no
